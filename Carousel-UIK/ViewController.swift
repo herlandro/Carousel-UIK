@@ -9,11 +9,33 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    lazy var helloWorldLabel: UITextView = {
+        let textView = UITextView()
+        textView.translatesAutoresizingMaskIntoConstraints = false
+        textView.backgroundColor = .clear
+        textView.font = .systemFont(ofSize: 16)
+        textView.textAlignment = .center
+        textView.isScrollEnabled = false
+        textView.isEditable = false
+        return textView
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        setupViews()
+        setupConstraints()
     }
 
+    private func setupViews() {
+        view.addSubview(helloWorldLabel)
+    }
 
+    private func setupConstraints() {
+        NSLayoutConstraint.activate([
+            helloWorldLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            helloWorldLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            helloWorldLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            helloWorldLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
+    }
 }
-
