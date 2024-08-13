@@ -41,6 +41,7 @@ class CarouselViewController: UIViewController {
 
     func setupScrollView() {
         scrollView.delegate = self
+        scrollView.contentInsetAdjustmentBehavior = .never
     }
 
     func setupSlides() {
