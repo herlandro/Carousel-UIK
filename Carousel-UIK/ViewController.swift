@@ -23,10 +23,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setupViews()
         setupConstraints()
+        if shouldShowCarousel() {
+            presentCarousel()
+        }
     }
 
     private func setupViews() {
         view.addSubview(helloWorldLabel)
+        view.backgroundColor = UIColor.white
     }
 
     private func setupConstraints() {
@@ -36,5 +40,14 @@ class ViewController: UIViewController {
             helloWorldLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             helloWorldLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
+    }
+
+    private func shouldShowCarousel() -> Bool {
+        return AppData.shared.isAppUpdated
+    }
+
+    private func presentCarousel() {
+        let carouselViewController = CarouselViewController()
+        navigationController?.viewControllers = [carouselViewController]
     }
 }

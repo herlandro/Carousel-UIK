@@ -109,11 +109,21 @@ class CarouselViewController: UIViewController {
 
     func redirectToNewPage() {
         let viewController = ViewController()
-        navigationController?.pushViewController(viewController, animated: true)
+        let sfSymbolsViewController = SFSymbolsViewController()
+        navigationController?.viewControllers = [viewController, sfSymbolsViewController]
+        self.updateLastVersionInUserDefaults()
     }
 
     func dismissCarousel() {
-//        dismiss(animated: true, completion: nil)
+        let viewController = ViewController()
+        navigationController?.viewControllers = [viewController]
+        self.updateLastVersionInUserDefaults()
+    }
+
+    private func updateLastVersionInUserDefaults() {
+        if let currentVersion = AppData.shared.currentVersion {
+            UserDefaults.standard.setValue(currentVersion, forKey: "LastAppVersion")
+        }
     }
 }
 
