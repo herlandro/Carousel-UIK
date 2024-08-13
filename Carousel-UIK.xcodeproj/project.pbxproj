@@ -14,6 +14,8 @@
 		2D9F92922C6557C0004742C1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 2D9F92912C6557C0004742C1 /* Base */; };
 		2D9F929A2C65D471004742C1 /* CarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9F92992C65D471004742C1 /* CarouselViewController.swift */; };
 		2D9F929D2C65D4A3004742C1 /* SlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9F929C2C65D4A3004742C1 /* SlideView.swift */; };
+		2D9F92E92C6C01CF004742C1 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9F92E82C6C01CE004742C1 /* AppData.swift */; };
+		2D9F92EB2C6C1435004742C1 /* SFSymbolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9F92EA2C6C1435004742C1 /* SFSymbolsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		2D9F92932C6557C0004742C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D9F92992C65D471004742C1 /* CarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewController.swift; sourceTree = "<group>"; };
 		2D9F929C2C65D4A3004742C1 /* SlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideView.swift; sourceTree = "<group>"; };
+		2D9F92E82C6C01CE004742C1 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+		2D9F92EA2C6C1435004742C1 /* SFSymbolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				2D9F92852C6557BE004742C1 /* AppDelegate.swift */,
 				2D9F92872C6557BE004742C1 /* SceneDelegate.swift */,
 				2D9F92892C6557BE004742C1 /* ViewController.swift */,
+				2D9F92EA2C6C1435004742C1 /* SFSymbolsViewController.swift */,
+				2D9F92E82C6C01CE004742C1 /* AppData.swift */,
 				2D9F928E2C6557C0004742C1 /* Assets.xcassets */,
 				2D9F92902C6557C0004742C1 /* LaunchScreen.storyboard */,
 				2D9F92932C6557C0004742C1 /* Info.plist */,
@@ -148,6 +154,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D9F92EB2C6C1435004742C1 /* SFSymbolsViewController.swift in Sources */,
+				2D9F92E92C6C01CF004742C1 /* AppData.swift in Sources */,
 				2D9F929A2C65D471004742C1 /* CarouselViewController.swift in Sources */,
 				2D9F928A2C6557BE004742C1 /* ViewController.swift in Sources */,
 				2D9F92862C6557BE004742C1 /* AppDelegate.swift in Sources */,
