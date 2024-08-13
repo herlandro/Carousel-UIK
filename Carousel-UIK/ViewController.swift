@@ -9,15 +9,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    lazy var helloWorldLabel: UITextView = {
-        let textView = UITextView()
-        textView.translatesAutoresizingMaskIntoConstraints = false
-        textView.backgroundColor = .clear
-        textView.font = .systemFont(ofSize: 16)
-        textView.textAlignment = .center
-        textView.isScrollEnabled = false
-        textView.isEditable = false
-        return textView
+    lazy var helloWorldLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.backgroundColor = .clear
+        label.font = .systemFont(ofSize: 16)
+        label.textAlignment = .center
+        label.text = "Hello World"
+        return label
     }()
 
     override func viewDidLoad() {
