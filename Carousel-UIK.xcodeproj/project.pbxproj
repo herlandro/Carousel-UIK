@@ -16,7 +16,18 @@
 		2D9F929D2C65D4A3004742C1 /* SlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9F929C2C65D4A3004742C1 /* SlideView.swift */; };
 		2D9F92E92C6C01CF004742C1 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9F92E82C6C01CE004742C1 /* AppData.swift */; };
 		2D9F92EB2C6C1435004742C1 /* SFSymbolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9F92EA2C6C1435004742C1 /* SFSymbolsViewController.swift */; };
+		2D9F92F32C6C2D8E004742C1 /* Carousel_UIKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9F92F22C6C2D8E004742C1 /* Carousel_UIKTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2D9F92F42C6C2D8E004742C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D9F927A2C6557BE004742C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D9F92812C6557BE004742C1;
+			remoteInfo = "Carousel-UIK";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2D9F92822C6557BE004742C1 /* Carousel-UIK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Carousel-UIK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,10 +41,19 @@
 		2D9F929C2C65D4A3004742C1 /* SlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideView.swift; sourceTree = "<group>"; };
 		2D9F92E82C6C01CE004742C1 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		2D9F92EA2C6C1435004742C1 /* SFSymbolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolsViewController.swift; sourceTree = "<group>"; };
+		2D9F92F02C6C2D8E004742C1 /* Carousel-UIKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Carousel-UIKTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D9F92F22C6C2D8E004742C1 /* Carousel_UIKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carousel_UIKTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2D9F927F2C6557BE004742C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D9F92ED2C6C2D8E004742C1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -47,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				2D9F92842C6557BE004742C1 /* Carousel-UIK */,
+				2D9F92F12C6C2D8E004742C1 /* Carousel-UIKTests */,
 				2D9F92832C6557BE004742C1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				2D9F92822C6557BE004742C1 /* Carousel-UIK.app */,
+				2D9F92F02C6C2D8E004742C1 /* Carousel-UIKTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,6 +106,14 @@
 			path = Carousel;
 			sourceTree = "<group>";
 		};
+		2D9F92F12C6C2D8E004742C1 /* Carousel-UIKTests */ = {
+			isa = PBXGroup;
+			children = (
+				2D9F92F22C6C2D8E004742C1 /* Carousel_UIKTests.swift */,
+			);
+			path = "Carousel-UIKTests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -104,6 +134,24 @@
 			productReference = 2D9F92822C6557BE004742C1 /* Carousel-UIK.app */;
 			productType = "com.apple.product-type.application";
 		};
+		2D9F92EF2C6C2D8E004742C1 /* Carousel-UIKTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D9F92F82C6C2D8E004742C1 /* Build configuration list for PBXNativeTarget "Carousel-UIKTests" */;
+			buildPhases = (
+				2D9F92EC2C6C2D8E004742C1 /* Sources */,
+				2D9F92ED2C6C2D8E004742C1 /* Frameworks */,
+				2D9F92EE2C6C2D8E004742C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2D9F92F52C6C2D8E004742C1 /* PBXTargetDependency */,
+			);
+			name = "Carousel-UIKTests";
+			productName = "Carousel-UIKTests";
+			productReference = 2D9F92F02C6C2D8E004742C1 /* Carousel-UIKTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -116,6 +164,10 @@
 				TargetAttributes = {
 					2D9F92812C6557BE004742C1 = {
 						CreatedOnToolsVersion = 15.4;
+					};
+					2D9F92EF2C6C2D8E004742C1 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 2D9F92812C6557BE004742C1;
 					};
 				};
 			};
@@ -133,6 +185,7 @@
 			projectRoot = "";
 			targets = (
 				2D9F92812C6557BE004742C1 /* Carousel-UIK */,
+				2D9F92EF2C6C2D8E004742C1 /* Carousel-UIKTests */,
 			);
 		};
 /* End PBXProject section */
@@ -144,6 +197,13 @@
 			files = (
 				2D9F928F2C6557C0004742C1 /* Assets.xcassets in Resources */,
 				2D9F92922C6557C0004742C1 /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D9F92EE2C6C2D8E004742C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,7 +224,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2D9F92EC2C6C2D8E004742C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D9F92F32C6C2D8E004742C1 /* Carousel_UIKTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2D9F92F52C6C2D8E004742C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2D9F92812C6557BE004742C1 /* Carousel-UIK */;
+			targetProxy = 2D9F92F42C6C2D8E004742C1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2D9F92902C6557C0004742C1 /* LaunchScreen.storyboard */ = {
@@ -353,6 +429,42 @@
 			};
 			name = Release;
 		};
+		2D9F92F62C6C2D8E004742C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WLGL2L2GLS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.h2.lab.Carousel-UIKTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Carousel-UIK.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Carousel-UIK";
+			};
+			name = Debug;
+		};
+		2D9F92F72C6C2D8E004742C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WLGL2L2GLS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.h2.lab.Carousel-UIKTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Carousel-UIK.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Carousel-UIK";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -370,6 +482,15 @@
 			buildConfigurations = (
 				2D9F92972C6557C0004742C1 /* Debug */,
 				2D9F92982C6557C0004742C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D9F92F82C6C2D8E004742C1 /* Build configuration list for PBXNativeTarget "Carousel-UIKTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D9F92F62C6C2D8E004742C1 /* Debug */,
+				2D9F92F72C6C2D8E004742C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
