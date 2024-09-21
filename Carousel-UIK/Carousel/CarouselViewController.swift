@@ -30,7 +30,7 @@ class CarouselViewController: UIViewController {
         layoutView()
         setupSlides()
         setupPageControl()
-        addButtonActions() // Adiciona ações aos botões
+        addButtonActions() // Add actions to buttons
     }
 
     func setupView() {
@@ -160,6 +160,7 @@ extension CarouselViewController {
     }
 
     func setupSlideScrollView(slides : [Slide]) {
+        
         scrollView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
         scrollView.contentSize = CGSize(width: view.frame.width * CGFloat(slides.count), height: view.frame.height)
         scrollView.isPagingEnabled = true
@@ -167,6 +168,19 @@ extension CarouselViewController {
         for i in 0 ..< slides.count {
             slides[i].frame = CGRect(x: view.frame.width * CGFloat(i), y: 0, width: view.frame.width, height: view.frame.height)
             scrollView.addSubview(slides[i])
+            
+            // Configuração inicial da imagem
+            slides[i].imageView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+            
+            // Animação de pulse
+            UIView.animate(withDuration: 1.0,
+                          delay: 0.2,
+                          usingSpringWithDamping: 0.5,
+                          initialSpringVelocity: 0.5,
+                          options: .curveEaseInOut,
+                          animations: {
+                slides[i].imageView.transform = .identity
+            }, completion: nil)
         }
     }
 }
@@ -174,18 +188,42 @@ extension CarouselViewController {
 extension CarouselViewController: UIScrollViewDelegate {
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let pageIndex = round(scrollView.contentOffset.x/view.frame.width)
-        pageControl.currentPage = Int(pageIndex)
-
-        if pageControl.currentPage == 0 {
-            slides[pageControl.currentPage].showBackButton(false)
-        } else {
-            slides[pageControl.currentPage].showBackButton(true)
+        let pageWidth = view.frame.width
+        let currentOffset = scrollView.contentOffset.x
+        let currentPage = Int(currentOffset / pageWidth)
+        
+        // Updates the pageControl
+        pageControl.currentPage = currentPage
+        
+        // Ensures we have a next page to animate
+        guard currentPage < slides.count - 1 else { return }
+        
+        // Calculates scroll progress (0 to 1)
+        let progress = (currentOffset - (pageWidth * CGFloat(currentPage))) / pageWidth
+        
+        // Calculates scales (now from 1.0 to 0.2 and from 0.2 to 1.0)
+        let currentScale = max(0.2, 1 - (0.8 * progress))
+        let nextScale = min(1, 0.2 + (0.8 * progress))
+        
+        // Applies transformations
+        if currentPage >= 0 && currentPage < slides.count {
+            slides[currentPage].imageView.transform = CGAffineTransform(scaleX: currentScale, y: currentScale)
         }
-
-        if pageControl.currentPage == slides.count - 1 {
-            slides[pageControl.currentPage].setTitleNextButton("start")
-            slides[pageControl.currentPage].setTitleBackButton("dismiss")
+        
+        // Button logic
+        if currentPage + 1 < slides.count {
+            slides[currentPage + 1].imageView.transform = CGAffineTransform(scaleX: nextScale, y: nextScale)
+        }
+        
+        if currentPage == 0 {
+            slides[currentPage].showBackButton(false)
+        } else {
+            slides[currentPage].showBackButton(true)
+        }
+        
+        if currentPage == slides.count - 1 {
+            slides[currentPage].setTitleNextButton("start")
+            slides[currentPage].setTitleBackButton("dismiss")
         }
     }
 
